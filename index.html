@@ -2,10 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Toward Coherence | Faith, Meaning, Healing" />
   <title>Toward Coherence</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e5e5e5;
+      --link: #000;
+      --hover: #f2f2f2;
+      --max-width: 640px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      display: flex;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 32px;
+      max-width: 52ch;
+    }
+
+    nav {
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+
+    a.link {
+      display: block;
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--link);
+      font-size: 16px;
+    }
+
+    a.link:hover {
+      background: var(--hover);
+    }
+
+    .label {
+      font-weight: 500;
+    }
+
+    .desc {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 12px 0 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Toward Coherence</h1>
-  <p>A personal, reflective project. Automated deployments.</p>
+  <main>
+    <header>
+      <h1>Toward Coherence</h1>
+      <p class="subtitle">
+        Making sense of Christian faith, meaning, and healing. Grounded in neuroscience, phenomenology, and philosophical realism.
+      </p>
+    </header>
+    
+    <section>
+      <p><strong>Interests:</strong></p>
+      <ul>
+        <li>Experiential approaches to psychotherapy that treat symptoms as meaningful and internally coherent (Coherence Therapy, Method of Levels, EMDR)</li>
+        <li>A realist philosophical orientation toward persons, meaning, and truth (informed by Dallas Willard)</li>
+        <li>Exploring how ideas actually shape lived experience</li>
+      </ul>
+    </section>
+
+    <nav aria-label="Links">
+      <a class="link" href="https://www.psychologytoday.com/profile/1581910" target="_blank" rel="noopener">
+        <span class="label">Psychology Today</span>
+      </a>
+
+      <a class="link" href="https://www.linkedin.com/in/ryan-cp-lewis/" target="_blank" rel="noopener">
+        <span class="label">LinkedIn</span>
+      </a>
+
+      <a class="link" href="https://substack.com/@ryanclewis" target="_blank" rel="noopener">
+        <span class="label">Substack</span>
+      </a>
+
+      <a class="link" href="https://vivifycounseling.com/vivify-therapist-ryan-lewis/" target="_blank" rel="noopener">
+        <span class="label">Private Practice Website</span>
+      </a>
+    </nav>
+
+    <footer>
+      © <span id="year"></span> Toward Coherence
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
